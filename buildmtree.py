@@ -28,10 +28,30 @@ def buildMerkleTree(value_list):
     print(len(nodes_list))
     return nodes_list
 
+def bfs(node,q,tree_file):
+    if node != None:
+        print(node.data)
+        q.append(node.left)
+        q.append(node.right)
+        tree_file.write(f'Parent = {node.data}\n')
+        if node.left != None:
+            tree_file.write(f'Left Child = {node.left.data} - Parent = {node.data}\n')
+        if node.right != None:
+            tree_file.write(f'Right Child = {node.right.data} - Parent = {node.data}\n')
+    while len(q) > 0:
+        bfs(q.pop(0),q,tree_file)
+
+    
+
 value_input = input('Enter words separated using commas: ')
 value_list = value_input.split(",")
+if len(value_list) % 2 == 1:
+    value_list.append(value_list[len(value_list)-1])
 print(f'Building a merkle tree based on {value_list}')
 tree_list = buildMerkleTree(value_list)[::-1]
-root_node = tree_list[0]
-temp = root_node
+for node in tree_list:
+    print(node.data)
+tree_file = open("merkle.tree", "w")
+bfs(tree_list[0],[],tree_file)
+tree_file.close()
 
