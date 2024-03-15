@@ -1,4 +1,5 @@
 from hashlib import sha256
+import json
 
 class MerkleTreeObj:
     def __init__(self,data):
@@ -6,6 +7,23 @@ class MerkleTreeObj:
         self.right = None
         self.data = data
         self.hash_value = sha256(data.encode('utf-8')).hexdigest()
+
+def adjustDataItems(size,value_list):
+    i = 2
+    power = 0
+    while pow(i,power) < size:
+        power+=1
+    remain =  pow(i,power) - size
+    if remain == 0:
+        return value_list
+    print(f'Adding additional dummy data of {remain} size')
+    if remain % 2 == 1:
+        for i in range(0,remain):
+            value_list.append(value_list[size-1])
+    else:
+        for i in range(size-remain,size):
+            value_list.append(value_list[i])
+    return value_list
         
 def buildMerkleTree(value_list):
     num_nodes = len(value_list)
@@ -25,33 +43,44 @@ def buildMerkleTree(value_list):
             i+=2
         else:
             break
-    print(len(nodes_list))
+    # print(len(nodes_list))
     return nodes_list
 
-def bfs(node,q,tree_file):
+def bfs(node,q):
     if node != None:
-        print(node.data)
+        # print(node.data)
         q.append(node.left)
         q.append(node.right)
-        tree_file.write(f'Parent = {node.data}\n')
-        if node.left != None:
-            tree_file.write(f'Left Child = {node.left.data} - Parent = {node.data}\n')
-        if node.right != None:
-            tree_file.write(f'Right Child = {node.right.data} - Parent = {node.data}\n')
+        tree_dic = {
+            "parent": {
+                "data": node.data,
+                "hash_value": node.hash_value,
+            },
+            "left_child": None if node.left == None else {
+                "data": node.left.data,
+                "hash_value": node.left.hash_value,
+            },
+            "right_child": None if node.right == None else {
+                "data": node.right.data,
+                "hash_value": node.right.hash_value,
+            }
+        }
+        json_list.append(tree_dic)
     while len(q) > 0:
-        bfs(q.pop(0),q,tree_file)
+        bfs(q.pop(0),q)
 
     
 
 value_input = input('Enter words separated using commas: ')
 value_list = value_input.split(",")
-if len(value_list) % 2 == 1:
-    value_list.append(value_list[len(value_list)-1])
+print(f'Original Data: {value_list}')
+value_list = adjustDataItems(len(value_list),value_list)
+
 print(f'Building a merkle tree based on {value_list}')
 tree_list = buildMerkleTree(value_list)[::-1]
-for node in tree_list:
-    print(node.data)
-tree_file = open("merkle.tree", "w")
-bfs(tree_list[0],[],tree_file)
-tree_file.close()
+json_list = []
+bfs(tree_list[0],[])
+json_object = json.dumps(json_list, indent=4)
+with open("merkle.tree", "w") as tree_file:
+    tree_file.write(json_object)
 
