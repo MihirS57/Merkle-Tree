@@ -6,7 +6,6 @@ class MerkleTreeObj:
         self.left = None
         self.right = None
         self.data = data
-        self.hash_value = sha256(data.encode('utf-8')).hexdigest()
 
 def adjustDataItems(size,value_list):
     i = 2
@@ -29,13 +28,14 @@ def buildMerkleTree(value_list):
     num_nodes = len(value_list)
     nodes_list = []
     for ind in range(num_nodes):
-        nodes_list.append(MerkleTreeObj(value_list[ind]))
+        nodes_list.append(MerkleTreeObj(data=value_list[ind]))
     i = 0
     while i < num_nodes:
         if i+1 < num_nodes:
             node_left = nodes_list[i]
             node_right = nodes_list[i+1]
-            parent_hash = MerkleTreeObj(node_left.hash_value+node_right.hash_value)
+            concat_val = node_left.data+node_right.data
+            parent_hash = MerkleTreeObj(sha256(concat_val.encode('utf-8')).hexdigest())
             nodes_list.append(parent_hash)
             parent_hash.left = node_left
             parent_hash.right = node_right
@@ -52,18 +52,9 @@ def bfs(node,q):
         q.append(node.left)
         q.append(node.right)
         tree_dic = {
-            "parent": {
-                "data": node.data,
-                "hash_value": node.hash_value,
-            },
-            "left_child": None if node.left == None else {
-                "data": node.left.data,
-                "hash_value": node.left.hash_value,
-            },
-            "right_child": None if node.right == None else {
-                "data": node.right.data,
-                "hash_value": node.right.hash_value,
-            }
+            "parent": node.data,
+            "left_child": None if node.left == None else node.left.data,
+            "right_child": None if node.right == None else node.right.data
         }
         json_list.append(tree_dic)
     while len(q) > 0:
