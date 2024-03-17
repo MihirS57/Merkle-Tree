@@ -1,5 +1,6 @@
 from hashlib import sha256
 import json
+import sys
 
 class MerkleTreeObj:
     def __init__(self,data):
@@ -26,6 +27,7 @@ def buildTreeFromFile():
     return root
 
 def checkInclusion(temp_root,searchItem):
+    global proveInclusion
     if temp_root.left == None and temp_root.right == None:
         if temp_root.data == searchItem:
             return True
@@ -39,19 +41,26 @@ def checkInclusion(temp_root,searchItem):
         if temp_root.left.data not in hash_set:
             hash_set.add(temp_root.left.data)
             hash_list.append(temp_root.left.data)
+            proveInclusion = sha256((temp_root.left.data+proveInclusion).encode('utf-8')).hexdigest()
     elif respLeft and respRight == False:
         if temp_root.right.data not in hash_set:
             hash_set.add(temp_root.right.data)
             hash_list.append(temp_root.right.data)
+            proveInclusion = sha256((proveInclusion+temp_root.right.data).encode('utf-8')).hexdigest()
     elif respLeft and respRight:
         if temp_root.left.data not in hash_set:
             hash_set.add(temp_root.left.data)
             hash_list.append(temp_root.left.data)
+            proveInclusion = sha256((temp_root.left.data+proveInclusion).encode('utf-8')).hexdigest()
     return respLeft or respRight
 
-
+searchItem = sys.argv[1]
 hash_set = set()
 hash_list = []
+proveInclusion = searchItem;
 tree_root = buildTreeFromFile()
-print(tree_root.data)
-print(checkInclusion(tree_root,"mihir"),hash_list)
+searchResults = checkInclusion(tree_root,searchItem)
+if searchResults and tree_root.data == proveInclusion:
+    print(f'yes {hash_list}')
+else:
+    print("No")

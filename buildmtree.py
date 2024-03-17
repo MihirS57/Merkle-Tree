@@ -1,5 +1,6 @@
 from hashlib import sha256
 import json
+import sys
 
 class MerkleTreeObj:
     def __init__(self,data):
@@ -61,8 +62,8 @@ def bfs(node,q):
         bfs(q.pop(0),q)
 
     
-
-value_input = input('Enter words separated using commas: ')
+print('Enter words separated using commas (for eg: your input can be <mihir,shah,viterbi,csci> without the "<" or ">" ): ')
+value_input = sys.argv[1]
 value_list = value_input.split(",")
 print(f'Original Data: {value_list}')
 value_list = adjustDataItems(len(value_list),value_list)
