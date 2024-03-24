@@ -1,116 +1,314 @@
 {
     "Tree 1": [
         {
-            "parent": "25f1ba4e60bf2b749da37f0d1e102347cd3065e3420fb187693a15fe418060cf",
-            "left_child": "a83ab2505ace9a8705ea2f0f4187087dc38947110596cf40cdd906d2cd3a9e6a",
-            "right_child": "08f9575008ec79cdbf2b42df68fd8b0cfbe55700641911fc204fb784ab9fc214"
+            "parent": {
+                "data": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d951742ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64",
+                "hash": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492d"
+            },
+            "left_child": {
+                "data": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e9081b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9",
+                "hash": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d95174"
+            },
+            "right_child": {
+                "data": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f507d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e",
+                "hash": "2ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64"
+            }
         },
         {
-            "parent": "a83ab2505ace9a8705ea2f0f4187087dc38947110596cf40cdd906d2cd3a9e6a",
-            "left_child": "alice",
-            "right_child": "bob"
+            "parent": {
+                "data": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e9081b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9",
+                "hash": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d95174"
+            },
+            "left_child": {
+                "data": "alice",
+                "hash": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90"
+            },
+            "right_child": {
+                "data": "bob",
+                "hash": "81b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9"
+            }
         },
         {
-            "parent": "08f9575008ec79cdbf2b42df68fd8b0cfbe55700641911fc204fb784ab9fc214",
-            "left_child": "carol",
-            "right_child": "david"
+            "parent": {
+                "data": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f507d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e",
+                "hash": "2ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64"
+            },
+            "left_child": {
+                "data": "carol",
+                "hash": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f5"
+            },
+            "right_child": {
+                "data": "david",
+                "hash": "07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e"
+            }
         },
         {
-            "parent": "alice",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "alice",
+                "hash": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "bob",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "bob",
+                "hash": "81b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "carol",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "carol",
+                "hash": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f5"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "david",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "david",
+                "hash": "07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         }
     ],
     "Tree 2": [
         {
-            "parent": "407c299a610cb7c926d26a390637e336e522d7c5f4cf2239da7845183e94fed4",
-            "left_child": "25f1ba4e60bf2b749da37f0d1e102347cd3065e3420fb187693a15fe418060cf",
-            "right_child": "0659e40980e5d4909c35a326054c868198b58144ff7f0ca95ba57700d487640a"
+            "parent": {
+                "data": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492dc11631861668f62d888c2cd9e8877c1c2d5dd91696ae90a4f0844f893cab7cdd",
+                "hash": "8948b4a86dfaf5396fde6009672471c332152221cc3e73d1b3f76b80866eed0c"
+            },
+            "left_child": {
+                "data": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d951742ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64",
+                "hash": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492d"
+            },
+            "right_child": {
+                "data": "4ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe74ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe7",
+                "hash": "c11631861668f62d888c2cd9e8877c1c2d5dd91696ae90a4f0844f893cab7cdd"
+            }
         },
         {
-            "parent": "25f1ba4e60bf2b749da37f0d1e102347cd3065e3420fb187693a15fe418060cf",
-            "left_child": "a83ab2505ace9a8705ea2f0f4187087dc38947110596cf40cdd906d2cd3a9e6a",
-            "right_child": "08f9575008ec79cdbf2b42df68fd8b0cfbe55700641911fc204fb784ab9fc214"
+            "parent": {
+                "data": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d951742ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64",
+                "hash": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492d"
+            },
+            "left_child": {
+                "data": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e9081b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9",
+                "hash": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d95174"
+            },
+            "right_child": {
+                "data": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f507d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e",
+                "hash": "2ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64"
+            }
         },
         {
-            "parent": "0659e40980e5d4909c35a326054c868198b58144ff7f0ca95ba57700d487640a",
-            "left_child": "9c03c33a7aed329250b52bf5601da8a72ddc265a93443039964cea845612744a",
-            "right_child": "9c03c33a7aed329250b52bf5601da8a72ddc265a93443039964cea845612744a"
+            "parent": {
+                "data": "4ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe74ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe7",
+                "hash": "c11631861668f62d888c2cd9e8877c1c2d5dd91696ae90a4f0844f893cab7cdd"
+            },
+            "left_child": {
+                "data": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a1024cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb",
+                "hash": "4ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe7"
+            },
+            "right_child": {
+                "data": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a1024cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb",
+                "hash": "4ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe7"
+            }
         },
         {
-            "parent": "a83ab2505ace9a8705ea2f0f4187087dc38947110596cf40cdd906d2cd3a9e6a",
-            "left_child": "alice",
-            "right_child": "bob"
+            "parent": {
+                "data": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e9081b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9",
+                "hash": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d95174"
+            },
+            "left_child": {
+                "data": "alice",
+                "hash": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90"
+            },
+            "right_child": {
+                "data": "bob",
+                "hash": "81b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9"
+            }
         },
         {
-            "parent": "08f9575008ec79cdbf2b42df68fd8b0cfbe55700641911fc204fb784ab9fc214",
-            "left_child": "carol",
-            "right_child": "david"
+            "parent": {
+                "data": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f507d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e",
+                "hash": "2ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64"
+            },
+            "left_child": {
+                "data": "carol",
+                "hash": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f5"
+            },
+            "right_child": {
+                "data": "david",
+                "hash": "07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e"
+            }
         },
         {
-            "parent": "9c03c33a7aed329250b52bf5601da8a72ddc265a93443039964cea845612744a",
-            "left_child": "eve",
-            "right_child": "fred"
+            "parent": {
+                "data": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a1024cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb",
+                "hash": "4ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe7"
+            },
+            "left_child": {
+                "data": "mihir",
+                "hash": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a10"
+            },
+            "right_child": {
+                "data": "shah",
+                "hash": "24cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb"
+            }
         },
         {
-            "parent": "9c03c33a7aed329250b52bf5601da8a72ddc265a93443039964cea845612744a",
-            "left_child": "eve",
-            "right_child": "fred"
+            "parent": {
+                "data": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a1024cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb",
+                "hash": "4ba863fe80239f7d1df10b876f149101650402afc005d95b2b1109b42d42ebe7"
+            },
+            "left_child": {
+                "data": "mihir",
+                "hash": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a10"
+            },
+            "right_child": {
+                "data": "shah",
+                "hash": "24cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb"
+            }
         },
         {
-            "parent": "alice",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "alice",
+                "hash": "2bd806c97f0e00af1a1fc3328fa763a9269723c8db8fac4f93af71db186d6e90"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "bob",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "bob",
+                "hash": "81b637d8fcd2c6da6359e6963113a1170de795e4b725b84d1e0b4cfd9ec58ce9"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "carol",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "carol",
+                "hash": "4c26d9074c27d89ede59270c0ac14b71e071b15239519f75474b2f3ba63481f5"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "david",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "david",
+                "hash": "07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "eve",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "mihir",
+                "hash": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a10"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "fred",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "shah",
+                "hash": "24cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "eve",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "mihir",
+                "hash": "2fadc2bec0172ba43191dafc3fde19ec24988a57f56ecf597caf9c9dae145a10"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         },
         {
-            "parent": "fred",
-            "left_child": null,
-            "right_child": null
+            "parent": {
+                "data": "shah",
+                "hash": "24cba1263475f27eeaff3b93904b004006720194f2f3c60e7613f109127a4ebb"
+            },
+            "left_child": {
+                "data": null,
+                "hash": null
+            },
+            "right_child": {
+                "data": null,
+                "hash": null
+            }
         }
     ]
 }
