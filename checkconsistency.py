@@ -17,7 +17,7 @@ def adjustDataItems(size,value_list):
     remain =  pow(i,power) - size
     if remain == 0:
         return value_list
-    print(f'Adding additional dummy data of {remain} size')
+    # print(f'Adding additional dummy data of {remain} size')
     if remain % 2 == 1:
         for i in range(0,remain):
             value_list.append(value_list[size-1])
@@ -150,8 +150,6 @@ def checkConsistency(nodes_list_1,nodes_list_2):
             rightChilds.append(temp_root.right)
             queue.append(temp_root.left)
             queue.append(temp_root.right)
-
-    print(len(parentNodes),len(leftChilds),len(rightChilds))
       
     op = []
     ogHashExists = False
@@ -176,7 +174,7 @@ def checkConsistency(nodes_list_1,nodes_list_2):
             left_child = combinedValue
         
         op+=values
-        op.append(root2.hash_value)
+        op.append(combinedHash)
     else:
         values = []
         leftChildExists = False
@@ -199,7 +197,7 @@ def checkConsistency(nodes_list_1,nodes_list_2):
             combinedHash = combinedHash+right_sibling
             combinedHash = sha256(combinedHash.encode('utf-8')).hexdigest()
         op+=values
-        op.append(root2.hash_value)
+        op.append(combinedHash)
     return op         
     
 
@@ -212,11 +210,11 @@ value_list_2 = value_input_2[1:len(value_input_2)-1].split(",")
 og_size = len(value_list_1)
 value_list_1 = adjustDataItems(len(value_list_1),value_list_1)
 value_list_2 = adjustDataItems(len(value_list_2),value_list_2)
-print(value_list_1)
-print(value_list_2)
 buildAndGenerateFile(value_list_1,value_list_2)
 op = checkConsistency(value_list_1,value_list_2)
 if len(op) > 0:
+    root1,root2 = buildTreeFromFile()
+    print(f'New Tree Root: {root2.hash_value}')
     print(f'yes {op}')
 else:
     print("no")
