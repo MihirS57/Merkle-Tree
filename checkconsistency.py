@@ -127,11 +127,15 @@ def buildTreeFromFile():
 
 def checkConsistency(nodes_list_1,nodes_list_2):
     for idx,node in enumerate(nodes_list_1):
-        print(node,nodes_list_2[idx])
+        if idx >= og_size:
+            break
         if node != nodes_list_2[idx]:
             return []
     
     root1,root2 = buildTreeFromFile()
+    if root1.hash_value == root2.hash_value:
+        print("Same tree")
+        return [root2.hash_value]
     
     parentNodes = []
     leftChilds = []
@@ -155,8 +159,7 @@ def checkConsistency(nodes_list_1,nodes_list_2):
         if root1.hash_value == parentNodes[i].hash_value:
             ogHashExists = True
             break
-    print(ogHashExists)
-    
+    right_sibling = ''
     if ogHashExists:
         op.append(root1.hash_value)
         values = []    
@@ -174,6 +177,29 @@ def checkConsistency(nodes_list_1,nodes_list_2):
         
         op+=values
         op.append(root2.hash_value)
+    else:
+        values = []
+        leftChildExists = False
+        combinedHash = ''
+        for node in parentNodes:
+            if root1.left.hash_value == node.hash_value:
+                values.append(root1.left.hash_value)
+                leftChildExists = True
+                break
+        print(leftChildExists)
+        if not leftChildExists:
+            return []
+        combinedHash = root1.left.hash_value
+        while combinedHash != root2.hash_value:
+            for idx,left_node in enumerate(leftChilds):
+                if combinedHash == left_node.hash_value:
+                    right_sibling = rightChilds[idx].hash_value
+                    values.append(right_sibling)
+                    break
+            combinedHash = combinedHash+right_sibling
+            combinedHash = sha256(combinedHash.encode('utf-8')).hexdigest()
+        op+=values
+        op.append(root2.hash_value)
     return op         
     
 
@@ -183,6 +209,7 @@ value_input_2 = sys.argv[2]
 json_list = []
 value_list_1 = value_input_1[1:len(value_input_1)-1].split(",")
 value_list_2 = value_input_2[1:len(value_input_2)-1].split(",")
+og_size = len(value_list_1)
 value_list_1 = adjustDataItems(len(value_list_1),value_list_1)
 value_list_2 = adjustDataItems(len(value_list_2),value_list_2)
 print(value_list_1)
