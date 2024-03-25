@@ -1,2 +1,0 @@
-python checkconsistency.py \[alice,bob,carol,david,eve\] \[alice,bob,carol,david,eve,feve,geve,heve,ieve,jeve,keve,leve,mihir,neve,oeve,peve\]
-python checkconsistency.py \[alice,bob,carol,david,eve\] \[alice,bob,carol,david,eve,feve,geve,heve\]

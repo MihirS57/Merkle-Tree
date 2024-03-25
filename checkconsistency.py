@@ -184,7 +184,6 @@ def checkConsistency(nodes_list_1,nodes_list_2):
                 values.append(root1.left.hash_value)
                 leftChildExists = True
                 break
-        print(leftChildExists)
         if not leftChildExists:
             return []
         combinedHash = root1.left.hash_value
@@ -200,8 +199,6 @@ def checkConsistency(nodes_list_1,nodes_list_2):
         op.append(combinedHash)
     return op         
     
-
-print('Enter words separated using commas (for eg: your input can be <mihir,shah,viterbi,csci> without the "<" or ">" ): ')
 value_input_1 = sys.argv[1]
 value_input_2 = sys.argv[2]
 json_list = []
@@ -212,8 +209,8 @@ value_list_1 = adjustDataItems(len(value_list_1),value_list_1)
 value_list_2 = adjustDataItems(len(value_list_2),value_list_2)
 buildAndGenerateFile(value_list_1,value_list_2)
 op = checkConsistency(value_list_1,value_list_2)
-if len(op) > 0:
-    root1,root2 = buildTreeFromFile()
+root1,root2 = buildTreeFromFile()
+if len(op) > 0 and op[len(op)-1] == root2.hash_value:
     print(f'New Tree Root: {root2.hash_value}')
     print(f'yes {op}')
 else:

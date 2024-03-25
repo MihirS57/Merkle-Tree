@@ -2,16 +2,16 @@
     "Tree 1": [
         {
             "parent": {
-                "data": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492ddaaf7f63449c3f6f4a017fb754ef2011e6cafb6beefa8a09d39162db5cff7556",
-                "hash": "babc821f0e14d40de50fb7d53b8515e753eb2e7f93ef33477eeb45097766ae87"
+                "data": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492d0e4e71bfdec1de0c78e753ec5d519cb77c8cc8ddab6940c03745afe776e24fff",
+                "hash": "68276a75cd9ad7b964deec2e92983a39770943be1f78bb437d2334de63c8a2b1"
             },
             "left_child": {
                 "data": "92bb1b1e2b4fe6055b9acef6b11b355bf0c58f15aa7b1cde6e3dabec49d951742ef2284c556c42ce4caaef56fc24dec27044dc6bee27fbb3411722e5e0a1ca64",
                 "hash": "c73547b1ffacdea74edffa5972a04ebc76ab1798a29e596be3bb48e647c3492d"
             },
             "right_child": {
-                "data": "1cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b6881cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b688",
-                "hash": "daaf7f63449c3f6f4a017fb754ef2011e6cafb6beefa8a09d39162db5cff7556"
+                "data": "fcb04e6f2b3cdfb0e03defbab71ed7af8ce59736845fef88074ad2dc3c4d87a8d218efc5f150a0bbce44eca97e726b88c4d60ca33d50f03c1061fd2ef2292784",
+                "hash": "0e4e71bfdec1de0c78e753ec5d519cb77c8cc8ddab6940c03745afe776e24fff"
             }
         },
         {
@@ -30,16 +30,16 @@
         },
         {
             "parent": {
-                "data": "1cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b6881cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b688",
-                "hash": "daaf7f63449c3f6f4a017fb754ef2011e6cafb6beefa8a09d39162db5cff7556"
+                "data": "fcb04e6f2b3cdfb0e03defbab71ed7af8ce59736845fef88074ad2dc3c4d87a8d218efc5f150a0bbce44eca97e726b88c4d60ca33d50f03c1061fd2ef2292784",
+                "hash": "0e4e71bfdec1de0c78e753ec5d519cb77c8cc8ddab6940c03745afe776e24fff"
             },
             "left_child": {
-                "data": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b",
-                "hash": "1cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b688"
+                "data": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3",
+                "hash": "fcb04e6f2b3cdfb0e03defbab71ed7af8ce59736845fef88074ad2dc3c4d87a8"
             },
             "right_child": {
-                "data": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b",
-                "hash": "1cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b688"
+                "data": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef384253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3",
+                "hash": "d218efc5f150a0bbce44eca97e726b88c4d60ca33d50f03c1061fd2ef2292784"
             }
         },
         {
@@ -72,30 +72,30 @@
         },
         {
             "parent": {
-                "data": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b",
-                "hash": "1cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b688"
+                "data": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3",
+                "hash": "fcb04e6f2b3cdfb0e03defbab71ed7af8ce59736845fef88074ad2dc3c4d87a8"
             },
             "left_child": {
                 "data": "eve",
                 "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
             },
             "right_child": {
-                "data": "eve",
-                "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
+                "data": "feve",
+                "hash": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3"
             }
         },
         {
             "parent": {
-                "data": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b",
-                "hash": "1cf5b1b0297262e22270a0007f015047895062fff60252ba5116d27e3f76b688"
+                "data": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef384253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3",
+                "hash": "d218efc5f150a0bbce44eca97e726b88c4d60ca33d50f03c1061fd2ef2292784"
             },
             "left_child": {
-                "data": "eve",
-                "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
+                "data": "feve",
+                "hash": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3"
             },
             "right_child": {
-                "data": "eve",
-                "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
+                "data": "feve",
+                "hash": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3"
             }
         },
         {
@@ -170,8 +170,8 @@
         },
         {
             "parent": {
-                "data": "eve",
-                "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
+                "data": "feve",
+                "hash": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3"
             },
             "left_child": {
                 "data": null,
@@ -184,8 +184,8 @@
         },
         {
             "parent": {
-                "data": "eve",
-                "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
+                "data": "feve",
+                "hash": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3"
             },
             "left_child": {
                 "data": null,
@@ -198,8 +198,8 @@
         },
         {
             "parent": {
-                "data": "eve",
-                "hash": "85262adf74518bbb70c7cb94cd6159d91669e5a81edf1efebd543eadbda9fa2b"
+                "data": "feve",
+                "hash": "84253ae449087c802cb0cd44c242f1d1dd24d449a050179cebf9aab9d3fb2ef3"
             },
             "left_child": {
                 "data": null,

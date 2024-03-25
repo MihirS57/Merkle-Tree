@@ -72,12 +72,10 @@ def bfs(node,q):
     while len(q) > 0:
         bfs(q.pop(0),q)
 
-    
-print('Enter words separated using commas (for eg: your input can be /[mihir,shah,viterbi,csci/]> ): ')
+
 value_input = sys.argv[1]
 value_input = value_input[1:len(value_input)-1]
 value_list = value_input.split(",")
-print(f'Original Data: {value_list}')
 value_list = adjustDataItems(len(value_list),value_list)
 
 print(f'Building a merkle tree based on {value_list}')
@@ -85,6 +83,7 @@ tree_list = buildMerkleTree(value_list)[::-1]
 json_list = []
 bfs(tree_list[0],[])
 json_object = json.dumps(json_list, indent=4)
+print(f'Saving this tree data in merkle.tree\n{json_object}')
 with open("merkle.tree", "w") as tree_file:
     tree_file.write(json_object)
 
